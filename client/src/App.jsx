@@ -86,7 +86,7 @@ function App() {
       <nav>
 
         <h2 className="logo">
-          Portfoilo
+          Portfolio
         </h2>
 
 
@@ -95,6 +95,9 @@ function App() {
           <a href="#home">Home</a>
 
           <a href="#about">About</a>
+
+
+<a href="#about">Working Experience</a>
 
           <a href="#skills">Skills</a>
 
@@ -146,210 +149,415 @@ function App() {
         alt="Piyumi Dewapaksha"
         className="profile-img"
       />
-
+     
     </div>
 
   </div>
 
 </section>
 
+{/* ABOUT & EXPERIENCE SECTION */}
+<section id="about" className="about-experience-section">
 
+  {/* About Me Details (සම්පූර්ණයෙන්ම මැදට සකසා ඇත) */}
+  <div className="about-me-container">
+    <h2 style={{ fontSize: '2.5rem', fontWeight: '700', letterSpacing: '0.05em', marginBottom: '1.5rem' }}>
+      About Me
+    </h2>
 
-      {/* ABOUT SECTION */}
+    <div className="about-me-text">
+      <p style={{ marginBottom: '1.25rem' }}>
+        I am a Software Engineering graduate passionate about
+        Front-End Development, UI/UX Design, and creating
+        innovative digital solutions. I have experience in
+        developing responsive web applications, designing
+        user-friendly interfaces, and transforming ideas into
+        meaningful digital experiences.
+      </p>
+      <p style={{ marginBottom: '1.25rem' }}>
+        I enjoy solving complex problems, learning new
+        technologies, and improving my skills in modern
+        software development. I am passionate about writing
+        clean, maintainable code and creating applications
+        that provide excellent user experiences.
+      </p>
+      <p>
+        My goal is to become a skilled Software Engineer
+        who combines technical knowledge with creative design
+        thinking to build impactful and efficient solutions.
+      </p>
+    </div>
+  </div>
 
-
-      <section id="about">
-
-
-        <h2>
-          About Me
-          <a href="c:\Users\GLOBAL TRADINGS\Downloads\Grad 28_1_26 Edited\Piyumi\RRR07034.jpg" target="_blank" rel="noreferrer">
-          
-          </a>
-        </h2>
-
-
-
-        <p>
-
-          <p>
-  I am a Software Engineering graduate passionate about
-  Front-End Development, UI/UX Design, and creating
-  innovative digital solutions. I have experience in
-  developing responsive web applications, designing
-  user-friendly interfaces, and transforming ideas into
-  meaningful digital experiences.
-
-  I enjoy solving complex problems, learning new
-  technologies, and improving my skills in modern
-  software development. I am passionate about writing
-  clean, maintainable code and creating applications
-  that provide excellent user experiences.
-
-  My goal is to become a skilled Software Engineer
-  who combines technical knowledge with creative design
-  thinking to build impactful and efficient solutions.
-</p>
-        </p>
-
+  {/* Working Experience Section Container (පොඩි පරතරයකින් පසුව ආරම්භ වේ) */}
+  <div className="experience-box-container">
     
-
-  <h2>Work Experience</h2>
-
-  <div className="experience-container">
-
-  {/* Card 1 */}
-
-  <div className="experience-card">
-
-    <div className="experience-icon">
-      💻
+    {/* Left Side: Image Area */}
+    <div className="exp-image-side">
+      <img 
+        src="working.png" 
+        alt="Skills Visual" 
+        style={{ width: '100', height: '100', objectFit: 'contain', borderRadius: '12px' }}
+      />
     </div>
 
-    <h3>
-      Software Engineer Intern
-    </h3>
-
-    <h4>
-      Lankatech Innovation
-    </h4>
-
-    <span className="experience-year">
-      2025 - 2026
-    </span>
-
-    <ul>
-      <li>
-        Assisted in developing responsive web applications using React and JavaScript.
-      </li>
-
-      <li>
-        Collaborated with the development team to implement new features.
-      </li>
-
-      <li>
-        Fixed bugs and improved application performance.
-      </li>
-    </ul>
-
-  </div>
-
-
-
-  {/* Card 2 */}
-
-  <div className="experience-card">
-
-    <div className="experience-icon">
-       💻
-    </div>
-
-    <h3>
-      QA Technician
-    </h3>
-
-    <h4>
-      GSS Company - Kurunegala
-    </h4>
-
-    <span className="experience-year">
-      2024 - 2025
-    </span>
-
-    <ul>
-      <li>
-        Performed quality inspections to ensure products met company standards.
-      </li>
-
-      <li>
-        Identified defects and reported quality issues.
-      </li>
-
-      <li>
-        Maintained quality documentation and inspection records.
-      </li>
-    </ul>
-
-  </div>
-
-
-</div>
-</section>
-
-
-
-      {/* SKILLS SECTION */}
-
-
-      <section id="skills">
-
-
-        <h2>
-          My Skills
+    {/* Right Side: Working Experience Content Area */}
+    <div className="exp-content-side">
+      
+      <div>
+        <h2 style={{ fontSize: '2.25rem', fontWeight: '700', letterSpacing: '0.05em', margin: 0 }}>
+          Working <span style={{ color: '#00eeff' }}>Experience</span>
         </h2>
+        <p style={{ color: '#94a3b8', marginTop: '0.75rem', fontSize: '1rem' }}>
+          My professional journey and the experience I have gained so far.
+        </p>
+      </div>
 
-
-
-        <div className="skills-container">
-
-
-          {
-            skills.map((skill,index)=>(
-
-              <div 
-                className="skill-card"
-                key={index}
-              >
-
-                {skill}
-
+      {/* Experience Cards Stack */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%' }}>
+        
+        {/* Card 1: Software Engineer Intern */}
+        <div className="single-experience-card">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', width: '100%' }}>
+            <div style={{ width: '48px', height: '48px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #334155', backgroundColor: '#0f172a', fontSize: '20px', flexShrink: 0 }}>
+              💻
+            </div>
+            <div style={{ flexGrow: 1 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '600', color: '#fff', margin: 0 }}>
+                  Software Engineer Intern
+                </h3>
+                <span style={{ color: '#00eeff', fontSize: '0.75rem', fontWeight: '500', backgroundColor: 'rgba(0, 238, 255, 0.1)', padding: '4px 12px', borderRadius: '9999px' }}>
+                  2024 - 2025
+                </span>
               </div>
+              <h4 style={{ color: '#cbd5e1', fontWeight: '500', fontSize: '0.875rem', marginTop: '4px', margin: 0 }}>
+                Lankatech Innovation
+              </h4>
+            </div>
+          </div>
 
-            ))
-          }
+          <ul>
+            <li>Assisted in developing responsive web applications using React and JavaScript.</li>
+            <li>Collaborated with the development team to implement new features.</li>
+            <li>Fixed bugs and improved application performance.</li>
+          </ul>
+        </div>
+      
+        {/* Card 2: UI/UX Designer & Front-End Developer */}
+        <div className="single-experience-card">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', width: '100%' }}>
+            <div style={{ width: '48px', height: '48px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #334155', backgroundColor: '#0f172a', fontSize: '20px', flexShrink: 0 }}>
+              💻
+            </div>
+            <div style={{ flexGrow: 1 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '600', color: '#fff', margin: 0 }}>
+                  UI/UX Designer and Front-End Devloper
+                </h3>
+                <span style={{ color: '#00eeff', fontSize: '0.75rem', fontWeight: '500', backgroundColor: 'rgba(0, 238, 255, 0.1)', padding: '4px 12px', borderRadius: '9999px' }}>
+                  2025
+                </span>
+              </div>
+              <h4 style={{ color: '#cbd5e1', fontWeight: '500', fontSize: '0.875rem', marginTop: '4px', margin: 0 }}>
+                MC Digital Innovate Software Company.
+              </h4>
+            </div>
+          </div>
 
-
+          <ul>
+            <li> New Design User interface for Taxi app .</li>
+            <li> Designed Wireframes/UX Connected/animations.</li>
+            <li>Joined Front end development and QA task.</li>
+          </ul>
         </div>
 
+      </div>
 
-      </section>
+    </div>
+  </div>
+
+</section>
+
+      {/* SKILLS SECTION */}
+<section id="skills">
+  <h2>My Skills</h2>
+  
+  <div className="skills-container">
     
-      <section id="projects">
-  <h2>Coding Projects</h2>
+    {/* HTML */}
+    <div className="skill-card">
+      <img 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" 
+        alt="HTML Logo" 
+      />
+      <p>HTML</p>
+    </div>
 
-  <div className="projects-grid">
-    {codingProjects.map((project, index) => (
-      <div className="project-card" key={index}>
-        <img src={project.image} alt={project.title} />
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-        <p><strong>{project.tech}</strong></p>
-        <a href={project.link} target="_blank" rel="noreferrer">
-          View Project
-        </a>
-      </div>
-    ))}
+    {/* CSS */}
+    <div className="skill-card">
+      <img 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" 
+        alt="CSS Logo" 
+      />
+      <p>CSS</p>
+    </div>
+
+    {/* JavaScript */}
+    <div className="skill-card">
+      <img 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
+        alt="JavaScript Logo" 
+      />
+      <p>JavaScript</p>
+    </div>
+
+    {/* Tailwind CSS */}
+    <div className="skill-card">
+      <img 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" 
+        alt="Tailwind CSS Logo" 
+      />
+      <p>Tailwind CSS</p>
+    </div>
+
+    {/* React */}
+    <div className="skill-card">
+      <img 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
+        alt="React Logo" 
+      />
+      <p>React</p>
+    </div>
+
+    {/* Next.js */}
+    <div className="skill-card">
+      <img 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" 
+        alt="Next.js Logo" 
+        style={{ filter: 'invert(1)' }} /* Dark theme එකේ ලෝගෝ එක කැපී පෙනීමට */
+      />
+      <p>Next.js</p>
+    </div>
+
+    {/* Node.js */}
+    <div className="skill-card">
+      <img 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" 
+        alt="Node.js Logo" 
+      />
+      <p>Node.js</p>
+    </div>
+
+    {/* Python */}
+    <div className="skill-card">
+      <img 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
+        alt="Python Logo" 
+      />
+      <p>Python</p>
+    </div>
+
+    {/* MySQL */}
+    <div className="skill-card">
+      <img 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" 
+        alt="MySQL Logo" 
+      />
+      <p>MySQL</p>
+    </div>
+
+    {/* Figma */}
+    <div className="skill-card">
+      <img 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" 
+        alt="Figma Logo" 
+      />
+      <p>Figma</p>
+    </div>
+
+    {/* GitHub */}
+    <div className="skill-card">
+      <img 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
+        alt="GitHub Logo" 
+        style={{ filter: 'invert(1)' }} /* Dark theme එකේ සුදුවට ලස්සනට පෙනීමට */
+      />
+      <p>GitHub</p>
+    </div>
+
   </div>
 </section>
 
-<section id="uiux-projects">
-  <h2>UI/UX Design Projects</h2>
+{/* PROJECTS SECTION */}
+<section id="projects" style={{ marginTop: '80px', padding: '40px 0' }}>
+  <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+    <h2 style={{ fontSize: '2.5rem', fontWeight: '700', letterSpacing: '0.05em', margin: 0 }}>
+      My Creative <span style={{ color: '#00eeff' }}>Projects</span>
+    </h2>
+    <p style={{ color: '#94a3b8', marginTop: '0.75rem', fontSize: '1rem' }}>
+      A showcase of my development work and professional UI/UX designs.
+    </p>
+  </div>
 
   <div className="projects-grid">
-    {uiuxProjects.map((project, index) => (
-      <div className="project-card" key={index}>
-        <img src={project.image} alt={project.title} />
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-        <p><strong>{project.tech}</strong></p>
-        <a href={project.link} target="_blank" rel="noreferrer">
-          View Design
-        </a>
+
+    {/* Project 1: Kids Game App */}
+    <div className="project-card">
+      <div className="project-img-wrapper">
+        <img 
+          src="kids.jpg" 
+          alt="Kids Game App" 
+        />
       </div>
-    ))}
+      <div className="project-info">
+        <h3>Interactive Kids Game App</h3>
+        <p>An engaging and educational web game designed for kids, featuring fun challenges, colorful visual cues, and interactive logic.</p>
+        <div className="project-tags">
+          <span>React</span>
+          <span>JavaScript</span>
+          <span>CSS3</span>
+        </div>
+        <div className="project-links">
+          <a href="https://kids-game-app-1.vercel.app/" target="_blank" rel="noreferrer" className="project-link-btn">🔗 Live Demo</a>
+          <a href="https://github.com/erandikapiyumi" target="_blank" rel="noreferrer" className="project-link-btn">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    {/* Project 2: Gym Management System */}
+    <div className="project-card">
+      <div className="project-img-wrapper">
+        <img 
+          src="gym.png" 
+          alt="Gym Management System" 
+        />
+      </div>
+      <div className="project-info">
+        <h3>Gym Management System</h3>
+        <p>A comprehensive system developed to manage gym memberships, trainer schedules, and member check-ins with an intuitive interface.</p>
+        <div className="project-tags">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>MySQL</span>
+        </div>
+        <div className="project-links">
+          <a href="https://github.com/erandikapiyumi" target="_blank" rel="noreferrer" className="project-link-btn">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    {/* Project 3: Python To-Do List */}
+    <div className="project-card">
+      <div className="project-img-wrapper">
+        <img 
+          src="to-do.png" 
+          alt="Python To-Do List" 
+        />
+      </div>
+      <div className="project-info">
+        <h3>Smart To-Do List Application</h3>
+        <p>A functional task management application built with Python to help users efficiently track, update, and manage their daily activities.</p>
+        <div className="project-tags">
+          <span>Python</span>
+          <span>CLI / GUI</span>
+        </div>
+        <div className="project-links">
+          <a href="https://github.com/erandikapiyumi" target="_blank" rel="noreferrer" className="project-link-btn">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    {/* Project 4: Figma Healthcare App */}
+    <div className="project-card">
+      <div className="project-img-wrapper">
+        <img 
+          src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop" 
+          alt="Healthcare Mobile App" 
+        />
+      </div>
+      <div className="project-info">
+        <h3>Healthcare Mobile App Design</h3>
+        <p>A user-centric UI/UX design for a mobile health platform focusing on doctor booking, patient records, and smooth navigational flow.</p>
+        <div className="project-tags">
+          <span>Figma</span>
+          <span>UI/UX</span>
+          <span>Mobile App</span>
+        </div>
+        <div className="project-links">
+          <a href="https://www.figma.com/design/ajx0CssTJuIAPDVHAoiUSX/Untitled?t=0IVAawoBI1GnGM5B-1" target="_blank" rel="noreferrer" className="project-link-btn">🎨 Figma Link</a>
+        </div>
+      </div>
+    </div>
+
+    {/* Project 5: Figma Fashion Jewelry & Clothing */}
+    <div className="project-card">
+      <div className="project-img-wrapper">
+        <img 
+          src="fashion.png" 
+          alt="Fashion App" 
+        />
+      </div>
+      <div className="project-info">
+        <h3>Fashion Jewelry & Clothing Mobile App</h3>
+        <p>A premium e-commerce app UI design with high-fidelity screens, elegant product cards, and seamless checkouts for fashion lovers.</p>
+        <div className="project-tags">
+          <span>Figma</span>
+          <span>UI/UX</span>
+          <span>E-Commerce</span>
+        </div>
+        <div className="project-links">
+          <a href="https://www.figma.com/design/eGAwbJ01wzPM98a6XOelce/Untitled?t=0IVAawoBI1GnGM5B-1" target="_blank" rel="noreferrer" className="project-link-btn">🎨 Figma Link</a>
+        </div>
+      </div>
+    </div>
+
+    {/* Project 6: Restaurant Food Ordering Website */}
+    <div className="project-card">
+      <div className="project-img-wrapper">
+        <img 
+          src="resturant.png" 
+          alt="Food Ordering Website" 
+        />
+      </div>
+      <div className="project-info">
+        <h3>Restaurant Food Ordering Website UI</h3>
+        <p>A delicious web design focused on online food ordering, modern cart systems, beautiful imagery layouts, and intuitive UX.</p>
+        <div className="project-tags">
+          <span>Figma</span>
+          <span>UI/UX</span>
+          <span>Web Design</span>
+        </div>
+        <div className="project-links">
+          <a href="https://www.figma.com/design/3E0trn3hL7551GOCTObSRK/Untitled?node-id=0-1&t=0IVAawoBI1GnGM5B-1" target="_blank" rel="noreferrer" className="project-link-btn">🎨 Figma Link</a>
+        </div>
+      </div>
+    </div>
+
+    {/* Project 7: Cricket Stadium Ticket Booking Website */}
+    <div className="project-card">
+      <div className="project-img-wrapper">
+        <img 
+          src="cricket.png" 
+          alt="Ticket Booking Website" 
+        />
+      </div>
+      <div className="project-info">
+        <h3>Cricket Stadium Ticket Booking Website</h3>
+        <p>An innovative stadium ticketing layout featuring seat maps, quick match bookings, and user dashboards for sport fans.</p>
+        <div className="project-tags">
+          <span>Figma</span>
+          <span>UI/UX</span>
+          <span>Web Design</span>
+        </div>
+        <div className="project-links">
+          <a href="https://www.figma.com/design/XXj0LVyo3oQ4MwGrqqilz0/Untitled?t=0IVAawoBI1GnGM5B-1" target="_blank" rel="noreferrer" className="project-link-btn">🎨 Figma Link</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
-
 
      {/* EDUCATION SECTION */}
 
@@ -555,6 +763,8 @@ function App() {
 
 
     {/* Message Form */}
+    
+    
 
     <div className="contact-form">
 

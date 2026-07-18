@@ -298,27 +298,27 @@ section {
    PROFILE IMAGE ANIMATION
 =========================== */
 
-.profile-img {
-
-  animation: floating 3s ease-in-out infinite;
-
+.image-box {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(45deg, #00f7ff, #8a2be2, #ff00ff);
+  animation: rotate 5s linear infinite;
 }
 
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #111;
+}
 
-@keyframes floating {
-
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-15px);
-  }
-
+@keyframes rotate {
   100% {
-    transform: translateY(0px);
+    transform: rotate(360deg);
   }
-
 }
 
 
@@ -528,183 +528,297 @@ section p{
   color:#d1d5db;
 
 }
-#about {
-
-  text-align:center;
-
-  max-width:900px;
-
-  margin:auto;
-
-  padding:80px 40px;
-
-  background:rgba(255,255,255,0.08);
-
-  border-radius:20px;
-
-  backdrop-filter:blur(10px);
-
+.about-experience-section {
+  width: 100%;
 }
 
-
-#about h2 {
-
-  color:rgba(14, 173, 201, 0.8);
-
-  font-size:40px;
-
-  margin-bottom:30px;
-
+/* About Me කොටස සම්පූර්ණයෙන්ම මැදට සහ පිළිවෙලට කිරීමට */
+.about-me-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Title එක සහ ඡේද මැදට පෙළගැස්වීම */
+  text-align: center;   /* අකුරු මැදට කිරීම */
 }
 
-
-#about p {
-
-  margin:0 auto;
-
-  max-width:800px;
-
-  text-align:center;
-
-  line-height:1.8;
-
-  font-size:18px;
-
-  color:#d1d5db;
-
+/* About Me ඇතුළේ තියෙන කරුණු (Paragraphs) මැද තියෙද්දීම පිළිවෙලකට තැබීම */
+.about-me-text {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 52rem;
+  margin: 0 auto;
 }
 
-
-
-
-
-
-
-/* SKILLS */
-
-
-.skills-container{
-
-  display:grid;
-
-  grid-template-columns:repeat(4,1fr);
-
-  gap:20px;
-
+/* කොටස් දෙක අතර ඔයා ඉල්ලපු පොඩි පරතරය (Small Gap) */
+.experience-box-container {
+  width: 100%;
+  margin-top: 40px; /* පරතරය අඩු කර 40px ලෙස සකස් කළා (පොඩි ඉඩක් සඳහා) */
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border: 1px solid #1e293b;
+  background-color: #0f172a;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-
-
-.skill-card{
-
-
-  background:rgba(13, 171, 196, 0.1);
-
-  padding:25px;
-
-  text-align:center;
-
-  border-radius:20px;
-
-  backdrop-filter:blur(10px);
-
-  transition:0.3s;
-
+@media (min-width: 768px) {
+  .experience-box-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
 }
 
-
-
-.skill-card:hover{
-
-  transform:translateY(-8px);
-
-  background:rgba(14, 173, 201, 0.8);
-
+.exp-image-side {
+  width: 100%;
+  background-color: rgba(30, 41, 59, 0.2);
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  padding: 24px;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-
-
-
-
-
-
-/* PROJECTS */
-
-
-.project-container{
-
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:30px;
-
+@media (min-width: 768px) {
+  .exp-image-side {
+    width: 35%;
+  }
 }
 
+.exp-content-side {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-grow: 1;
+  text-align: left;
+}
 
+@media (min-width: 768px) {
+  .exp-content-side {
+    width: 65%;
+  }
+}
 
-.project-card{
+.single-experience-card {
+  width: 100%;
+  background-color: rgba(30, 41, 59, 0.4);
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
 
+.single-experience-card:hover {
+  border-color: #00eeff;
+}
 
-  background:rgba(255,255,255,0.1);
+.single-experience-card ul {
+  color: #94a3b8;
+  font-size: 16px;
+  line-height: 1.7;
+  list-style-type: disc;
+  padding-left: 24px;
+  margin: 8px 0 0 0;
+  border-top: 1px solid rgba(30, 41, 59, 0.6);
+  padding-top: 16px;
+  text-align: left;
+}
 
-  padding:25px;
-
-  border-radius:20px;
-
-  backdrop-filter:blur(10px);
-
-  transition:0.3s;
-
+.single-experience-card ul li {
+  margin-bottom: 8px;
+  text-align: left;
 }
 
 
 
-.project-card:hover{
+/* ==========================================
+   SKILLS SECTION (MODERN & GLOW STYLE)
+   ========================================== */
 
-  transform:translateY(-10px);
+.skills-container {
+  display: grid;
+  /* Responsive Grid: Screen එක පොඩි වෙනකොට Cards ගාණ auto හැඩගැස්වේ */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 25px;
+  width: 100;
+  padding: 10px 0;
+}
 
+.skill-card {
+  /* Dark Glassmorphism Effect */
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.4), rgba(15, 23, 42, 0.6));
+  padding: 30px 25px;
+  text-align: center;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  /* සියුම් Border එකක් සහ Glow transition එකක් */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card එක උඩට Mouse එක ගෙනියන විට (Hover Effect) */
+.skill-card:hover {
+  transform: translateY(-10px);
+  
+  /* Cyberpunk Cyan Glow Effect එක */
+  border-color: rgba(0, 238, 255, 0.6);
+  background: linear-gradient(135deg, rgba(14, 173, 201, 0.2), rgba(15, 23, 42, 0.8));
+  box-shadow: 0 15px 30px rgba(0, 238, 255, 0.25), 
+              inset 0 0 15px rgba(0, 238, 255, 0.1);
+}
+
+/* Card එක ඇතුළේ තියෙන Icon හෝ Image එකක් සඳහා */
+.skill-card img, 
+.skill-card svg,
+.skill-card i {
+  transition: transform 0.4s ease;
+}
+
+.skill-card:hover img,
+.skill-card:hover svg,
+.skill-card:hover i {
+  transform: scale(1.15); /* Hover කලාම Icon එක පොඩ්ඩක් ලොකු වේ */
+}
+
+/* Responsive: Mobile Screen වලදී දෙපැත්තෙන් ලස්සනට පෙනීමට */
+@media (max-width: 640px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr); /* Mobile වලදී Cards 2 බැගින් පෙන්වයි */
+    gap: 16px;
+  }
 }
 
 
 
-.project-image img{
-
-  width:100%;
-
-  height:180px;
-
-  object-fit:cover;
-
-  border-radius:15px;
-
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  
+  /* 🛠️ කාඩ්ස් ටික අයිනටම යන්නේ නැතුව මැදට ගැනීමට මේ පේළි 3 එකතු කරන්න: */
+  max-width: 1200px;        /* මුළු ප්‍රොජෙක්ට් සෙක්ෂන් එකම උපරිම පළල 1200px වලට සීමා කරයි */
+  margin: 0 auto;           /* සීමා කරපු grid එක මුළු පේජ් එකේම හරියටම මැදට (Center) ගෙනෙයි */
+  padding: 0 20px;          /* මොබයිල් ෆෝන් වලදී කාඩ් දෙපැත්ත screen එකේ නොගෑවී තියෙන්න 20px ඉඩක් තබයි */
+  
+  width: 100%;
 }
 
-
-
-.project-card h3{
-
-  margin:20px 0;
-
-  font-size:24px;
-
+.project-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.4), rgba(15, 23, 42, 0.6));
+  border: 1px solid #1e293b;
+  border-radius: 17px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
 }
 
-
-
-.project-card span{
-
-  display:block;
-
-  margin:20px 0;
-
-  color:rgba(14, 173, 201, 0.8);
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: #00eeff;
+  box-shadow: 0 20px 40px -15px rgba(0, 238, 255, 0.3);
 }
 
+.project-img-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background-color: #0f172a;
+}
 
+.project-img-wrapper img {
+  width: 100%;
+  height: 100;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
 
+.project-card:hover .project-img-wrapper img {
+  transform: scale(1.1);
+}
 
+.project-info {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+  text-align: left;
+}
 
+.project-info h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.project-tags span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #00eeff;
+  background: rgba(0, 238, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 238, 255, 0.15);
+}
+
+.project-links {
+  display: flex;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid rgba(30, 41, 59, 0.6);
+}
+
+.project-link-btn {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+.project-link-btn:hover {
+  color: #00eeff;
+}
 
 
 /* =========================
@@ -725,7 +839,7 @@ section p{
 
   font-size:42px;
 
-  color:#6C63FF;
+  color:#1797cd;
 
   margin-bottom:60px;
 
@@ -946,242 +1060,7 @@ footer{
   object-fit: cover;
   border-radius: 15px;
 }
-/* ===========================
-   WORK EXPERIENCE
-=========================== */
 
-#experience{
-    padding:80px 10%;
-    text-align:center;
-}
-
-#experience h2{
-    font-size:42px;
-    color:#077fb3;
-    margin-bottom:50px;
-}
-
-.experience-container{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-.experience-card{
-
-    width:700px;
-
-    background:rgba(255,255,255,.12);
-
-    backdrop-filter:blur(15px);
-
-    border-radius:20px;
-
-    padding:35px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-    transition:.4s;
-
-    text-align:left;
-
-}
-
-.experience-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 15px 35px rgba(108,99,255,.35);
-
-}
-
-.experience-icon{
-
-    font-size:55px;
-
-    text-align:center;
-
-    margin-bottom:20px;
-
-}
-
-.experience-card h3{
-
-    color:#6C63FF;
-
-    margin-bottom:10px;
-
-}
-
-.experience-card h4{
-
-    color:#444;
-
-    margin-bottom:10px;
-
-}
-
-.experience-year{
-
-    display:inline-block;
-
-    background:#6C63FF;
-
-    color:#fff;
-
-    padding:8px 18px;
-
-    border-radius:20px;
-
-    margin-bottom:20px;
-
-}
-
-.experience-card ul{
-
-    padding-left:20px;
-
-    line-height:1.8;
-
-}
-
-.experience-card li{
-
-    color:#ffffff;
-
-    margin-bottom:10px;
-
-}
-/* ===========================
-   WORK EXPERIENCE
-=========================== */
-
-#experience {
-  padding: 80px 10%;
-  text-align: center;
-}
-
-#experience h2 {
-  font-size: 42px;
-  color: #6C63FF;
-  margin-bottom: 50px;
-}
-
-.experience-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.experience-card {
-  width: 340px;
-  min-height: 420px;
-  padding: 30px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  transition: 0.4s;
-  text-align: left;
-}
-
-.experience-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(108, 99, 255, 0.35);
-}
-
-.experience-icon {
-  font-size: 50px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.experience-card h3 {
-  color: #19ecd7;
-  margin-bottom: 10px;
-}
-
-.experience-card h4 {
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.experience-year {
-  display: inline-block;
-  background: #214e63;
-  color: white;
-  padding: 8px 18px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.experience-card ul {
-  padding-left: 20px;
-}
-
-.experience-card ul li {
-  margin-bottom: 10px;
-  color: #ffffff;
-  line-height: 1.6;
-}
-.experience-container {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 25px;          /* cards අතර gap එක */
-  flex-wrap: wrap;
-}
-.experience-card {
-  width: 350px;
-}
-.experience-container {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 25px;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.experience-card {
-  width: 340px;
-  min-height: 420px;
-  padding: 30px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  transition: 0.4s;
-  text-align:left;
-}
-#experience {
-  padding-top: 120px;
-}
-#about {
-  margin-bottom: 80px;
-}
-
-#experience {
-  margin-top: 80px;
-}
-.edu-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.edu-icon img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
 /* ==========================
       CONTACT SECTION
 ========================== */
@@ -1194,7 +1073,7 @@ footer{
 
 #contact h2 {
   font-size: 42px;
-  color: #6C63FF;
+  color: #0a7990;
   margin-bottom: 50px;
 }
 
@@ -1257,7 +1136,7 @@ footer{
 
   font-size: 38px;
 
-  background: #0b66ac;
+  background: #025f7e;
 
   border-radius: 50%;
 
@@ -1435,7 +1314,7 @@ footer{
 
  font-size:42px;
 
- color:#6C63FF;
+ color:#0fb0d1;
 
  margin-bottom:50px;
 
@@ -1511,29 +1390,52 @@ footer{
 
 
 
-.contact-form input,
-.contact-form textarea{
+/* ==========================================
+   FIX FOR CONTACT FORM INPUT TEXTBOXES
+   ========================================== */
 
- width:100%;
-
- padding:15px;
-
- margin-bottom:15px;
-
- border:none;
-
- outline:none;
-
- border-radius:12px;
-
- background:white;
-
- font-size:15px;
-
+/* 1. Input Fields සහ Textarea එක තද පැහැයක් කිරීම */
+#contact form input,
+#contact form textarea,
+.contact-card input,
+.contact-card textarea,
+input[type="text"],
+input[type="email"],
+textarea {
+  background-color: rgba(15, 23, 42, 0.6) !important; /* සුදු පාට වෙනුවට Dark Glass බැක්ග්‍රවුන්ඩ් එකක් */
+  border: 1px solid #1e293b !important;                /* සිනිඳු බෝඩර් එකක් */
+  color: #ffffff !important;                            /* ඇතුළේ ටයිප් කරන අකුරු පිරිසිදු සුදු පාට */
+  padding: 14px 20px !important;
+  border-radius: 16px !important;                       /* රවුම් දාර ලස්සනට තබා ගැනීම */
+  font-size: 0.95rem !important;
+  outline: none !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  transition: all 0.3s ease !important;
+   margin-bottom: 25px !important; /* 👈 මේකෙන් පෙට්ටි එකිනෙක ඈත් කරයි */
+  display: block !important;       /* පෙට්ටි එකක් යට එකක් පිහිටීමට උදව් වේ */
+  width: 100% !important;
 }
 
 
+/* 2. Placeholder (ටයිප් කරන්න කලින් පෙනෙන අකුරු) ස්ටයිල් එක */
+#contact form input::placeholder,
+#contact form textarea::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: #64748b !important; /* මෘදු අළු පැහැයක් */
+  opacity: 1 !important;
+}
 
+/* 3. Textbox එකක් ක්ලික් කරලා ටයිප් කරද්දී (Focus) ලැබෙන Neon Glow එක */
+#contact form input:focus,
+#contact form textarea:focus,
+input:focus,
+textarea:focus {
+  border-color: #00eeff !important; /* බෝඩර් එක නියොන් සයන් වේ */
+  box-shadow: 0 0 12px rgba(0, 238, 255, 0.2) !important;
+  background-color: rgba(15, 23, 42, 0.8) !important;
+}
 .contact-form textarea{
 
  resize:none;
@@ -1617,4 +1519,157 @@ footer{
 
   object-fit: cover;
 
+}
+.profile-ring {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 10px #8a2be2);
+  }
+
+  to {
+    filter: drop-shadow(0 0 35px #00f7ff);
+  }
+}.education-card{
+
+    opacity:0;
+    transform:translateY(60px);
+
+    animation:slideUp 1s ease forwards;
+
+}
+
+
+.education-card:nth-child(2){
+
+    animation-delay:0.3s;
+
+}
+
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(60px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+html{
+    scroll-behavior:smooth;
+}
+/* Main wrapper inside your parent card */
+.experience-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .experience-wrapper {
+    flex-direction: row;
+  }
+}
+
+/* Left Image Box */
+.image-box {
+  width: 100%;
+  background: rgba(30, 41, 59, 0.2);
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+}
+
+@media (min-width: 768px) {
+  .image-box {
+    width: 40%;
+    min-height: 350px;
+  }
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 15px rgba(0, 238, 255, 0.2));
+}
+
+/* Right Content Box */
+.content-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .content-box {
+    width: 60%;
+  }
+}
+/* Form Group එක ඇතුළේ තියෙන පෙට්ටි එකිනෙකින් ඈත් කිරීම */
+.form-group {
+  margin-bottom: 20px !important; /* බොක්ස් 3 අතර නියම පරතරය හදන්නේ මේකෙන් */
+  width: 100%;
+  text-align: left;
+}
+
+/* බොක්ස් වල දාර රවුම් කර, එකට ඇලී තිබූ බෝඩර්ස් නිවැරදි කිරීම */
+.form-group input,
+.form-group textarea {
+  display: block;
+  width: 100% !important;
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  border: 1px solid #1e293b !important;
+  color: #ffffff !important;
+  padding: 20px 20px !important;
+  border-radius: 16px !important; /* හැම පෙට්ටියකම දාර හතරම ලස්සනට රවුම් කරයි */
+  font-size: 0.95rem !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  transition: all 0.3s ease !important;
+}
+
+/* ක්ලික් කරලා ටයිප් කරද්දී සිදුවන වෙනස්කම් */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00eeff !important;
+  box-shadow: 0 0 12px rgba(0, 238, 255, 0.2) !important;
+  background-color: rgba(15, 23, 42, 0.8) !important;
+}
+
+/* බටන් එක යටින් තියෙන පරතරය සැකසීම */
+/* ==========================================
+   CONTACT BUTTON ADJUSTMENT
+   ========================================== */
+
+.contact-btn {
+  /* 🛠️ බටන් එක තව ටිකක් බොක්ස් එකෙන් ඈත් කරලා ලස්සනට තියාගන්න margin එක 15px-20px වගේ දාන්න */
+  margin-top: 15px !important; 
+  
+  /* බටන් එකේ layout එක හරියටම center වෙලා තියෙන්න display එක block කරගන්න */
+  display: inline-block; 
+  
+  cursor: pointer;
+  margin-bottom: 25px !important; /* 👈 මේකෙන් පෙට්ටි එකිනෙක ඈත් කරයි */
+  display: block !important;       /* පෙට්ටි එකක් යට එකක් පිහිටීමට උදව් වේ */
+  width: 100% !important;
 }
