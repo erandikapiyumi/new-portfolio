@@ -144,12 +144,8 @@ function App() {
     {/* Image Part */}
     <div className="home-image">
 
-      <img 
-        src="/profile.jpg"
-        alt="Piyumi Dewapaksha"
-        className="profile-img"
-      />
-     
+  
+<img src="/new-portfolio/profile.png" alt="Profile" className="profile-image profile-image-animate" />
     </div>
 
   </div>
