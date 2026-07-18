@@ -6,7 +6,7 @@ Welcome to my personal portfolio website! A sleek, modern, and fully responsive 
 
 See it in action here:
 *   **GitHub Pages:** [erandikapiyumi.github.io/new-portfolio](https://erandikapiyumi.github.io/new-portfolio/)
-*   **Vercel Mirror:** [new-portfolio-ngqr.vercel.app](https://new-portfolio-ngqr.vercel.app/)
+
 
 ---
 
