@@ -463,6 +463,29 @@ function App() {
         </div>
       </div>
     </div>
+    
+    {/* Project 3: HTML Pet Care Websie */}
+    <div className="project-card">
+      <div className="project-img-wrapper">
+        <img 
+          src="pet.png" 
+          alt="Pet Care Website" 
+        />
+      </div>
+      <div className="project-info">
+        <h3>Pet Care Website</h3>
+        <p>This my Pet Care Website I build using HTML , CSS , JS.</p>
+        <div className="project-tags">
+          <span>HTML</span>
+          <span>CSS / JS</span>
+        </div>
+        <div className="https://pet-care-ruby.vercel.app/">
+          <a href="https://github.com/erandikapiyumi" target="_blank" rel="noreferrer" className="project-link-btn">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+    
+    
 
     {/* Project 4: Figma Healthcare App */}
     <div className="project-card">
