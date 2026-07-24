@@ -464,22 +464,23 @@ function App() {
       </div>
     </div>
     
-    {/* Project 3: HTML Pet Care Websie */}
+    {/* Project 3:Pet Care Websie */}
     <div className="project-card">
       <div className="project-img-wrapper">
         <img 
-          src="pet.png" 
+          src="pets.png" 
           alt="Pet Care Website" 
         />
       </div>
       <div className="project-info">
         <h3>Pet Care Website</h3>
-        <p>This my Pet Care Website I build using HTML , CSS , JS.</p>
+        <p>A responsive and user-friendly pet care website designed to help pet owners explore pet care services, health tips, grooming information, and adoption resources through a clean and modern interface..</p>
         <div className="project-tags">
           <span>HTML</span>
           <span>CSS / JS</span>
         </div>
-        <div className="https://pet-care-ruby.vercel.app/">
+        <div className="project-links">
+          <a href="https://pet-care-ruby.vercel.app/" target="_blank" rel="noreferrer" className="project-link-btn">🔗 Live Demo</a>
           <a href="https://github.com/erandikapiyumi" target="_blank" rel="noreferrer" className="project-link-btn">💻 GitHub</a>
         </div>
       </div>
